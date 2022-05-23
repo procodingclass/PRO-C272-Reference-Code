@@ -11,7 +11,6 @@ ezButton button(8);
 
 int head_y = 0;
 int head_x = 0;
-int flag = 0;
 
 int snake_x[64];
 int snake_y[64];
@@ -120,11 +119,6 @@ void move_sprite() {
   else if (direction == "down") head_y++;
 
   window_check();
-
-  if (button.isPressed()) {
-    Serial.println("The button is pressed");
-    flag = 1;
-  }
 }
 
 void draw_sprites() {
